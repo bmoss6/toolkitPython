@@ -2,7 +2,7 @@ from __future__ import (absolute_import, division, print_function, unicode_liter
 
 import random
 import numpy as np
-
+import re
 def mode(a, axis=0):
 # taken from scipy code
 # https://github.com/scipy/scipy/blob/master/scipy/stats/stats.py#L609
@@ -103,7 +103,7 @@ class Matrix:
                             attr_name = attr_def[:attr_def.index("'")]
                             attr_def = attr_def[attr_def.index("'")+1:].strip()
                         else:
-                            search = re.search(r'(\w*)\s*({.*})', attr_def)
+                            search = re.search(r'(\w*)\s*(.*)', attr_def)
                             attr_name = search.group(1)
                             attr_def = search.group(2)
                             # Remove white space from atribute values

@@ -1,6 +1,6 @@
 from __future__ import (absolute_import, division, print_function, unicode_literals)
 
-from .matrix import Matrix
+from matrix import Matrix
 import math
 
 # this is an abstract class
